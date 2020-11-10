@@ -1,0 +1,49 @@
+    body {
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .christmas-top__movie {
+      
+        width: 100vw;
+        height: auto;
+    
+    }
+
+    .christmas-top__movie:before{
+    content: '';
+    display: block;
+    background: url(golden_dots_m.png);
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: 110%;
+    animation: 5s fadeIn;
+ 
+    }
+
+    .christmas .christmas-top {
+        position: relative;
+        height: 100vh;
+    }
+    .christmas .christmas-top__head {
+       
+        font-size: 100px;
+        font-size: 5rem;
+        text-align: center;
+        color: #fff;
+        z-index: 20;
+        position: absolute;
+        font-weight: 100;
+        width: 100%;
+        top: 30%;
+    }
+
+    .video {
+        width:100vw;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
