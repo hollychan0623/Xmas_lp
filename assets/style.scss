@@ -1,5 +1,7 @@
     $basiccolor:#020046;
-    $mainfont:#030882;
+    $mainfont:#020450;
+    $snowcolor:#fff;
+
     
     body {
         font-family: 'Times New Roman', Times, serif;
@@ -14,13 +16,12 @@
     .christmas-top__movie:before{
     content: '';
     display: block;
-    background: url(golden_dots_m.png);
-    background-repeat: repeat-y;
-    background-repeat: repeat-x;
+    background: url(./img/golden_dots_m.png);
+    
     position: absolute;
     z-index: 10;
     width: 100vw;
-    height: 110%;
+    height: 100%;
     animation: 5s fadeIn;
     }
 
@@ -57,5 +58,58 @@
 
     .christmas_description {
         color:$mainfont;
-       
+        margin:10% 0;
+        text-shadow:2px 2px 3px rgb(138, 136, 136) ; 
+        font-size: 1.5em;
     }
+
+    .items {
+        background-color: $mainfont;
+        height:100%;
+        margin: 0 auto;
+        padding: 5%;
+    }
+
+    .snowline {
+        max-width:1200px;
+        margin:5% auto;
+        background: url(snowflake.png);
+        background-repeat: repeat-x;
+        height:150px;
+    }
+
+    .rubi {
+        color:$snowcolor;
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .title {
+        @extend .rubi;
+        font-size: 5em;
+        padding-bottom:5%;
+    }
+
+    .submenu {
+        @extend.rubi;
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width:1020px;
+        margin: 0 auto;
+        padding-bottom:10%;
+    }
+
+    li, .s_rubi{
+        width:400px;
+        padding:4% 3% 3% 4%;
+        color:$mainfont;
+        background-color: $snowcolor;
+        border-radius: 150px;
+        margin:5%;
+    }
+
+    
+    
+  
+

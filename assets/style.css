@@ -10,13 +10,11 @@ body {
 .christmas-top__movie:before {
   content: '';
   display: block;
-  background: url(golden_dots_m.png);
-  background-repeat: repeat-y;
-  background-repeat: repeat-x;
+  background: url(./img/golden_dots_m.png);
   position: absolute;
   z-index: 10;
   width: 100vw;
-  height: 110%;
+  height: 100%;
   -webkit-animation: 5s fadeIn;
           animation: 5s fadeIn;
 }
@@ -66,6 +64,58 @@ h1 {
 }
 
 .christmas_description {
-  color: #030882;
+  color: #020450;
+  margin: 10% 0;
+  text-shadow: 2px 2px 3px #8a8888;
+  font-size: 1.5em;
+}
+
+.items {
+  background-color: #020450;
+  height: 100%;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.snowline {
+  max-width: 1200px;
+  margin: 5% auto;
+  background: url(snowflake.png);
+  background-repeat: repeat-x;
+  height: 150px;
+}
+
+.rubi, .title, .submenu {
+  color: #fff;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.title {
+  font-size: 5em;
+  padding-bottom: 5%;
+}
+
+.submenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding-bottom: 10%;
+}
+
+li, .s_rubi {
+  width: 400px;
+  padding: 4% 3% 3% 4%;
+  color: #020450;
+  background-color: #fff;
+  border-radius: 150px;
+  margin: 5%;
 }
 /*# sourceMappingURL=style.css.map */
