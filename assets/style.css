@@ -76,7 +76,6 @@ h1 {
 
 .items {
   height: 100%;
-  margin: 10% auto;
   padding: 5%;
   max-width: 1200px;
 }
@@ -143,7 +142,7 @@ small {
 
 .forsomeone {
   max-width: 1020px;
-  margin: 0 auto;
+  margin: 20% auto;
 }
 
 .someone_contents {
@@ -172,7 +171,16 @@ small {
   font-size: 1.5em;
 }
 
-#ladies {
+#mens_rubi, #mens {
+  color: #080154;
+  text-align: center;
+}
+
+#mens_rubi {
+  font-size: 1.5em;
+}
+
+#ladies, #mens {
   font-size: 8em;
 }
 
@@ -189,7 +197,7 @@ small {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 30%;
+  margin-top: 20%;
 }
 
 .categories:before, .categories:after {
@@ -264,5 +272,9 @@ small {
   font-family: "URWClassicoRegular", sans-serif;
   font-size: 1.5em;
   color: #fff;
+}
+
+#lastmore {
+  margin-bottom: 40%;
 }
 /*# sourceMappingURL=style.css.map */

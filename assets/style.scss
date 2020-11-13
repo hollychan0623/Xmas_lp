@@ -67,7 +67,6 @@
 
     .items {
         height:100%;
-        margin: 10% auto;
         padding: 5%;
         max-width:1200px;
     }
@@ -133,7 +132,7 @@
 
       .forsomeone {
           max-width:$main_width;
-          margin: 0 auto;
+          margin: 20% auto;
       }
 
       .someone_contents {
@@ -160,7 +159,16 @@
           font-size:1.5em;
       }
 
-      #ladies {
+      #mens_rubi,#mens {
+        color:#080154;
+        text-align: center;
+      }
+
+      #mens_rubi {
+          font-size:1.5em;
+      }
+
+      #ladies,#mens {
           font-size: 8em;
       }
 
@@ -173,7 +181,7 @@
           color:$mainfont;
           display: flex;
           align-items: center;
-          margin-top: 30%;
+          margin-top: 20%;
       }
 
       .categories:before,.categories:after {
@@ -192,6 +200,7 @@
       .categories:after {
         margin-left:.4em;
       }
+
 
       .chiristmas_items_ul {
         display: flex;
@@ -243,6 +252,12 @@
           font-size: 1.5em;
           color:$snowcolor;
       }
+
+      #lastmore {
+          margin-bottom: 40%;
+      }
+
+
 
 
     
