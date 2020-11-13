@@ -70,22 +70,25 @@ h1 {
   font-size: 1.5em;
 }
 
-.items {
+.wrap_top {
   background-color: #020450;
+}
+
+.items {
   height: 100%;
-  margin: 0 auto;
+  margin: 10% auto;
   padding: 5%;
+  max-width: 1200px;
 }
 
 .snowline {
-  max-width: 1200px;
-  margin: 5% auto;
-  background: url(snowflake.png);
+  margin: 10% auto;
+  background: url(./img/snowflake.png);
   background-repeat: repeat-x;
   height: 150px;
 }
 
-.rubi, .title, .submenu {
+.rubi, .title, .submenu, .phrase, small {
   color: #fff;
   text-align: center;
   font-size: 2.5em;
@@ -105,17 +108,161 @@ h1 {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 1020px;
   margin: 0 auto;
   padding-bottom: 10%;
 }
 
 li, .s_rubi {
   width: 400px;
-  padding: 4% 3% 3% 4%;
+  font-size: .8em;
+  padding: 3% 0% 2% 0%;
   color: #020450;
   background-color: #fff;
   border-radius: 150px;
   margin: 5%;
+}
+
+.wrapping {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.pic {
+  border-radius: 150px;
+  margin: 10%;
+}
+
+.phrase {
+  font-size: 2em;
+  margin: 10% 0;
+}
+
+small {
+  font-size: .5em;
+}
+
+.forsomeone {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.someone_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10%;
+}
+
+.person_pic {
+  border-radius: 150px;
+}
+
+.right_phrase {
+  word-wrap: break-word;
+  margin: 30% 50px;
+  font-size: 1.5em;
+}
+
+#ladies_rubi, #ladies {
+  color: #A40505;
+  text-align: center;
+}
+
+#ladies_rubi {
+  font-size: 1.5em;
+}
+
+#ladies {
+  font-size: 8em;
+}
+
+.person_pic {
+  margin-top: 20%;
+}
+
+.categories {
+  font-size: 5em;
+  color: #020450;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30%;
+}
+
+.categories:before, .categories:after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 2px;
+  background: #000;
+  display: block;
+  margin: 10%  0;
+}
+
+.categories:before {
+  margin-right: .4em;
+}
+
+.categories:after {
+  margin-left: .4em;
+}
+
+.chiristmas_items_ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.chiristmas_items_li {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 30px;
+  width: 30%;
+  margin: 0 0 50px 0;
+}
+
+.chiristmas_items_a {
+  font-family: "URWClassicoRegular", sans-serif;
+  font-size: 1em;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.item_name {
+  padding: 10% 0;
+}
+
+.chiristmas_items_img {
+  width: 100%;
+}
+
+.morebutton {
+  background-color: #034f1b;
+  text-align: center;
+  padding: 3%;
+  border-radius: 150px;
+  width: 300px;
+  margin: 0 auto;
+  -webkit-box-shadow: 2px 2px 10px #4d4d4d;
+          box-shadow: 2px 2px 10px #4d4d4d;
+}
+
+.moreletter {
+  font-family: "URWClassicoRegular", sans-serif;
+  font-size: 1.5em;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
