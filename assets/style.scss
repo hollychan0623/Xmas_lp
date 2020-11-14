@@ -1,23 +1,22 @@
     $basiccolor:#020046;
     $mainfont:#020450;
     $snowcolor:#fff;
+    $main_width:1020px;
+    $border-radious:150px;
 
     
     body {
         font-family: 'Times New Roman', Times, serif;
     }
     .christmas-top__movie {
-      
         width: 100vw;
         height: auto;
-    
     }
 
     .christmas-top__movie:before{
     content: '';
     display: block;
     background: url(./img/golden_dots_m.png);
-    
     position: absolute;
     z-index: 10;
     width: 100vw;
@@ -30,7 +29,6 @@
         height: 100vh;
     }
     .christmas .christmas-top__head {
-       
         font-size: 100px;
         font-size: 5rem;
         text-align: center;
@@ -63,17 +61,19 @@
         font-size: 1.5em;
     }
 
-    .items {
+    .wrap_top {
         background-color: $mainfont;
+    }
+
+    .items {
         height:100%;
-        margin: 0 auto;
         padding: 5%;
+        max-width:1200px;
     }
 
     .snowline {
-        max-width:1200px;
-        margin:5% auto;
-        background: url(snowflake.png);
+        margin:10% auto;
+        background: url(./img/snowflake.png);
         background-repeat: repeat-x;
         height:150px;
     }
@@ -95,19 +95,170 @@
         display:flex;
         justify-content: center;
         flex-wrap: wrap;
-        max-width:1020px;
         margin: 0 auto;
         padding-bottom:10%;
     }
 
     li, .s_rubi{
         width:400px;
-        padding:4% 3% 3% 4%;
+        font-size: .8em;
+        padding:3% 0% 2% 0%;
         color:$mainfont;
         background-color: $snowcolor;
         border-radius: 150px;
         margin:5%;
     }
+
+    .wrapping {
+        max-width:750px;
+        margin:0 auto;
+      }
+      
+      .pic {
+        border-radius: 150px;
+        margin:10%;
+      }
+
+      .phrase {
+          @extend .rubi;
+          font-size: 2em;
+          margin:10% 0;
+      }
+
+      small {
+          @extend .rubi;
+          font-size:.5em;
+      }
+
+      .forsomeone {
+          max-width:$main_width;
+          margin: 20% auto;
+      }
+
+      .someone_contents {
+          display: flex;
+          margin-bottom:10%;
+      }
+
+      .person_pic {
+          border-radius: $border-radious;
+      }
+
+      .right_phrase {
+        word-wrap: break-word;
+        margin: 30% 50px;
+        font-size: 1.5em;
+      }
+
+      #ladies_rubi,#ladies {
+        color: #A40505;
+        text-align: center;
+      }
+
+      #ladies_rubi {
+          font-size:1.5em;
+      }
+
+      #mens_rubi,#mens {
+        color:#080154;
+        text-align: center;
+      }
+
+      #mens_rubi {
+          font-size:1.5em;
+      }
+
+      #ladies,#mens {
+          font-size: 8em;
+      }
+
+      .person_pic {
+          margin-top:20%;
+      }
+
+      .categories {
+          font-size: 5em;
+          color:$mainfont;
+          display: flex;
+          align-items: center;
+          margin-top: 20%;
+      }
+
+      .categories:before,.categories:after {
+          content:"";
+          flex-grow: 1;
+          height:2px;
+          background: #000;
+          display: block;
+          margin:10%  0 ;
+      }
+
+      .categories:before {
+          margin-right:.4em;
+      }
+
+      .categories:after {
+        margin-left:.4em;
+      }
+
+
+      .chiristmas_items_ul {
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom:10%;
+      }
+
+      .chiristmas_items_li {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 30px;
+        width: 30%;
+        margin: 0 0 50px 0;
+      }
+
+      .chiristmas_items_a {
+        font-family: "URWClassicoRegular", sans-serif;
+        font-size: 1em;
+        line-height: 1.8;
+        text-align: center;
+      }
+
+      .item_name {
+        padding:10% 0;
+      }
+
+      .chiristmas_items_img {
+          width:100%;
+      }
+
+      .morebutton {
+          background-color:#034f1b ;
+          text-align: center;
+          padding:3%;
+          border-radius: $border-radious;
+          width:300px;
+          margin: 0 auto;
+          box-shadow:2px 2px 10px rgb(77, 77, 77);
+      }
+
+      .moreletter {
+          font-family: "URWClassicoRegular", sans-serif;
+          font-size: 1.5em;
+          color:$snowcolor;
+      }
+
+      #lastmore {
+          margin-bottom: 40%;
+      }
+
+
+
 
     
     
