@@ -2,9 +2,22 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
-.christmas-top__movie {
+.christmas .christmas-top {
+  position: relative;
+  height: 100vh;
+}
+
+.christmas .section {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  position: relative;
+}
+
+.christmas .christmas-top__movie {
   width: 100vw;
   height: auto;
+  top: 0;
 }
 
 .christmas-top__movie:before {
@@ -78,6 +91,7 @@ h1 {
   height: 100%;
   padding: 5%;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 .snowline {
@@ -90,7 +104,7 @@ h1 {
 .rubi, .title, .submenu, .phrase, small {
   color: #fff;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .title {
@@ -113,7 +127,7 @@ h1 {
 
 li, .s_rubi {
   width: 400px;
-  font-size: .8em;
+  font-size: 1em;
   padding: 3% 0% 2% 0%;
   color: #020450;
   background-color: #fff;
@@ -167,7 +181,7 @@ small {
   text-align: center;
 }
 
-#ladies_rubi {
+#ladies_rubi, #mens_rubi, #myself {
   font-size: 1.5em;
 }
 
@@ -176,11 +190,12 @@ small {
   text-align: center;
 }
 
-#mens_rubi {
-  font-size: 1.5em;
+#myself_rubi, #myself {
+  color: #05A46A;
+  text-align: center;
 }
 
-#ladies, #mens {
+#ladies, #mens, #myself {
   font-size: 8em;
 }
 
@@ -251,6 +266,7 @@ small {
 
 .item_name {
   padding: 10% 0;
+  font-size: 1.5em;
 }
 
 .chiristmas_items_img {
@@ -276,5 +292,76 @@ small {
 
 #lastmore {
   margin-bottom: 40%;
+}
+
+@media screen and (max-width: 768px) {
+  .christmas .christmas-top__movie video {
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .christmas .christmas-top__movie {
+    overflow: hidden;
+    left: 0%;
+  }
+  .christmas .christmas-top__head {
+    font-size: 3.5em;
+  }
+  .christmas_description {
+    font-size: .8em;
+  }
+  .rubi, .title, .submenu, .phrase, small {
+    font-size: 1em;
+  }
+  li, .s_rubi {
+    width: 300px;
+    font-size: 1.8em;
+  }
+  .title {
+    font-size: 3em;
+    padding-bottom: 10%;
+  }
+  .phrase {
+    font-size: 1.3em;
+  }
+  small {
+    font-size: .5em;
+  }
+  .pic {
+    width: 80%;
+  }
+  #ladies, #mens, #myself {
+    font-size: 4.5em;
+  }
+  .someone_contents {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .left_pic {
+    margin: 0 20%;
+  }
+  .person_pic {
+    width: 100%;
+  }
+  .right_phrase {
+    margin: 20% 50px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  .categories {
+    font-size: 3em;
+  }
+  .chiristmas_items_li {
+    width: 40%;
+    padding: 0px;
+  }
+  .item_name {
+    font-size: .6em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
