@@ -3,6 +3,11 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
+span {
+  font-family: Serendipity,sans-serif;
+  font-size:1.2em;
+}
+
 /* ハンバーガーメニュー */
 #nav-toggle {
   position: fixed;
@@ -640,7 +645,7 @@ small {
     padding: 0px;
   }
   .item_name {
-    font-size: .6em;
+    font-size: 1em;
   }
   #pc_footerframe {
     display: none;
