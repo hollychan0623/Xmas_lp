@@ -5,12 +5,193 @@
     $border-radious:150px;
 
     
-    body {
-        font-family: 'Times New Roman', Times, serif;
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+    /* ハンバーガーメニュー */
+#nav-toggle {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    height: 32px;
+    cursor: pointer;
+  }
+  #nav-toggle > div {
+    position: relative;
+    width: 36px;
+  }
+  #nav-toggle span {
+    width: 100%;
+    height: 1px;
+    left: 0;
+    display: block;
+    background: #333;
+    position: absolute;
+    transition: transform 0.6s ease-in-out, top 0.5s ease;
+  }
+  #nav-toggle span:nth-child(1) {
+    top: 0;
+  }
+  #nav-toggle span:nth-child(2) {
+    top: 14px;
+  }
+  #nav-toggle span:nth-child(3) {
+    top: 28px;
+  }
+  #nav-toggle:hover span:nth-child(1) {
+    top: 4px;
+  }
+  #nav-toggle:hover span:nth-child(3) {
+    top: 23px;
+  }
+  
+  .open #nav-toggle span {
+    background: #fff;
+  }
+  .open #nav-toggle span:nth-child(1) {
+    top: 15px;
+    transform: rotate(45deg);
+  }
+  .open #nav-toggle span:nth-child(2) {
+    top: 15px;
+    width: 0;
+    left: 50%;
+  }
+  .open #nav-toggle span:nth-child(3) {
+    top: 15px;
+    transform: rotate(-45deg);
+  }
+  
+  nav {
+    padding-top: 300px;
+  }
+  
+  /* z-index */
+  #nav-toggle {
+    z-index: 1000;
+  }
+  
+  #container {
+    z-index: 900;
+  }
+  
+  #gloval-nav {
+    background: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    right: 0;
+    bottom: 0;
+    z-index: 990;
+    text-align: center;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    opacity: 0.8;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    width:20%;
+    overflow: auto;
+   -webkit-overflow-scrolling: touch;
+  }
+  
+  #gloval-nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 1px 0;
+    transition: color 0.6s ease;
+  }
+  #gloval-nav a:hover {
+    color: #666;
+  }
+  #gloval-nav ul {
+    list-style: none;
+  }
+  #gloval-nav ul li {
+    opacity: 0;
+    transform: translateX(200px);
+    transition: transform 0.6s ease, opacity 0.2s ease;
+    margin-top:20%;
+  }
+  #gloval-nav ul li:nth-child(2) {
+    transition-delay: 0.15s;
+  }
+  #gloval-nav ul li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  #gloval-nav ul li:nth-child(4) {
+    transition-delay: 0.45s;
+  }
+  #gloval-nav ul li:nth-child(5) {
+    transition-delay: 0.6s;
+  }
+  #gloval-nav ul li:nth-child(6) {
+    transition-delay: 0.75s;
+  }
+  #gloval-nav ul li:nth-child(7) {
+    transition-delay: 0.9s;
+  }
+  #gloval-nav ul li:nth-child(8) {
+    transition-delay: 1.00s;
+  }
+  #gloval-nav ul li:nth-child(9) {
+    transition-delay: 1.15s;
+  }
+  #gloval-nav ul li:nth-child(10) {
+    transition-delay: 1.45s;
+  }
+  #gloval-nav ul li:nth-child(11) {
+    transition-delay: 1.6s;
+  }
+  
+  #hr {
+    padding: 0 0 50px;
+      margin: 0 0 50px;
+      border-bottom: 1px dotted #fff;
+  }
+  
+  .menu {
+    margin-bottom:20%;
+  }
+  
+  /* open */
+  .open {
+    overflow: hidden;
+  }
+  .open #gloval-nav {
+    visibility: visible;
+    /* opacity: 1; */
+  }
+  .open #gloval-nav li {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 1s ease, opacity 0.9s ease;
+  }
+  
+  /* ここまで */
+  
+
+    .christmas .christmas-top {
+        position: relative;
+        height: 100vh;
     }
-    .christmas-top__movie {
+
+    .christmas .section {
+        width: 100%;
+        height: auto;
+        background: #fff;
+        position: relative;
+    }
+
+    .christmas .christmas-top__movie {
         width: 100vw;
         height: auto;
+        top:0;
     }
 
     .christmas-top__movie:before{
@@ -69,6 +250,7 @@
         height:100%;
         padding: 5%;
         max-width:1200px;
+        margin: 0 auto;
     }
 
     .snowline {
@@ -81,7 +263,7 @@
     .rubi {
         color:$snowcolor;
         text-align: center;
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     .title {
@@ -99,9 +281,9 @@
         padding-bottom:10%;
     }
 
-    li, .s_rubi{
+    .menu_title, .s_rubi{
         width:400px;
-        font-size: .8em;
+        font-size: 1em;
         padding:3% 0% 2% 0%;
         color:$mainfont;
         background-color: $snowcolor;
@@ -155,7 +337,7 @@
         text-align: center;
       }
 
-      #ladies_rubi {
+      #ladies_rubi,#mens_rubi,#myself {
           font-size:1.5em;
       }
 
@@ -164,11 +346,12 @@
         text-align: center;
       }
 
-      #mens_rubi {
-          font-size:1.5em;
+      #myself_rubi,#myself {
+          color: #05A46A;
+          text-align: center;
       }
 
-      #ladies,#mens {
+      #ladies,#mens,#myself {
           font-size: 8em;
       }
 
@@ -231,6 +414,8 @@
 
       .item_name {
         padding:10% 0;
+        font-size:1.5em;
+        
       }
 
       .chiristmas_items_img {
@@ -257,6 +442,125 @@
           margin-bottom: 40%;
       }
 
+      #page-top {
+        position: fixed;
+        bottom: 50px;
+        right: 100px;
+        font-size: 77%;
+        width:90px;
+      }
+      #page-top a {
+        background: linear-gradient(180deg, #d6e3ff 0%, #cdfffd 70%, #fff 50%, #fff 100%);
+        text-decoration: none;
+        color: #000;
+        width: 100px;
+        padding: 30px 0;
+        text-align: center;
+        display: block;
+        border-radius: 5px;
+      }
+      #page-top a:hover {
+        text-decoration: none;
+        background: linear-gradient(180deg, #d6e3ff 0%, #cdfffd 70%, #fff 50%, #fff 100%);
+      }
+      #smp_footerframe {
+        display:none;
+    }
+      
+
+      @media screen and (max-width:768px) {
+        .xmastree {
+        width:60px;
+        }
+        #gloval-nav {
+        width: 60%;
+        font-size: 1em;
+        }
+        #page-top {
+        position: fixed;
+        bottom: 150px;
+        right: 10px;
+        font-size: 75%;
+        }
+        #page-top a {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        }
+        nav {
+        padding-top: 30%;
+        }
+        #gloval-nav ul li {
+            margin-top:0%;
+        }
+        .christmas .christmas-top__movie video {
+            width: auto;
+            height: 100vh;
+            overflow: hidden;
+            }
+        .christmas .christmas-top__movie {
+            overflow: hidden;
+            left: 0%;
+        }
+        .christmas .christmas-top__head {
+           font-size:3.5em;
+        }
+        .christmas_description {
+            font-size:.8em;
+        }
+        .rubi {
+            font-size:1em;
+        }
+        .menu_title, .s_rubi {
+            width:300px;
+            font-size:1.8em;
+        }
+        .title {
+            font-size:3em;
+            padding-bottom:10%;
+        }
+        .phrase {
+            font-size:1.3em;
+        }
+        small {
+            font-size:.5em;
+        }
+        .pic {
+            width:80%;
+        }
+        #ladies,#mens,#myself {
+            font-size:4.5em;
+        }
+       .someone_contents{
+           flex-direction: column;
+           width:100%;
+           box-sizing: border-box;
+       }
+       .left_pic {
+        margin: 0 20%;
+       }
+       .person_pic {
+        width:100%;
+       }
+       .right_phrase {
+        margin: 20% 50px;
+        font-size: 1.2em;
+        text-align: center;
+       }
+       .categories {
+        font-size:3em;
+       }
+       .chiristmas_items_li {
+        width: 40%;
+        padding:0px;
+       }
+       .item_name {
+           font-size:.6em;
+       }
+       #pc_footerframe {
+           display:none;
+       }
+         }
 
 
 
