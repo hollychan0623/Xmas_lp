@@ -599,6 +599,9 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
       
 
       @media screen and (max-width:768px) {
+        .mast__text {
+          font-size: 1em;
+        }
         .xmastree {
         width:60px;
         }
@@ -608,9 +611,10 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
         }
         #page-top {
         position: fixed;
-        bottom: 150px;
-        right: 10px;
+        bottom: 50px;
+        right: 50px;
         font-size: 75%;
+        width:50px;
         }
         #page-top a {
         width: 70px;
@@ -685,7 +689,7 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
         padding:0px;
        }
        .item_name {
-           font-size:.6em;
+           font-size:1em;
        }
        #pc_footerframe {
            display:none;

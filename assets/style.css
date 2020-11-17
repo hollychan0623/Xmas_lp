@@ -1693,6 +1693,9 @@ small {
 }
 
 @media screen and (max-width: 768px) {
+  .mast__text {
+    font-size: 1em;
+  }
   .xmastree {
     width: 60px;
   }
@@ -1702,9 +1705,10 @@ small {
   }
   #page-top {
     position: fixed;
-    bottom: 150px;
-    right: 10px;
+    bottom: 50px;
+    right: 50px;
     font-size: 75%;
+    width: 50px;
   }
   #page-top a {
     width: 70px;
@@ -1783,7 +1787,7 @@ small {
     padding: 0px;
   }
   .item_name {
-    font-size: .6em;
+    font-size: 1em;
   }
   #pc_footerframe {
     display: none;
