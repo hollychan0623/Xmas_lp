@@ -46,7 +46,7 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
 //  bg-overlay()
 //  @description:pseduo overlay element  
 //  @param: $bg_hex: [$color-dark] - hex value for rgba conversion
-//  @param: $bg_opacity:[0.6] - alpha transparency level
+//  @param: $bg_opacity:[1] - alpha transparency level
 //  @param: $top_layer: element or class name for higher z-index layer
 //--------------------------
 @mixin bg-overlay($bg_hex: #111, $bg_opacity: 0.6, $top_layer: 'header') {
@@ -84,8 +84,8 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
   align-items: center;
   width: 100%;
   height: 100vh;
-  // color: #fff;
-  // background-color: #111;
+  color: #fff;
+  background-color: #111;
   @include bg-overlay(#111, 0.9);  
   
   &__bg{
@@ -134,8 +134,8 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
 @keyframes letter-glow{
   0%   { opacity: 0; text-shadow: 0px 0px 1px rgba(255,255,255,0.1)}
   66%  { opacity: 1; text-shadow: 0px 0px 20px rgba(255,255,255,0.9) }
-  77%   { opacity: 1;  }
-  100% { opacity:0.7; text-shadow: 0px 0px 20px rgba(255,255,255,0.0)}
+  77%   { opacity: .7 ;  }
+  100% { opacity: 1; text-shadow: 0px 0px 20px rgba(255,255,255,0.0)}
 }
 
     /* ハンバーガーメニュー */
@@ -152,10 +152,11 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
   }
   #nav-toggle span {
     width: 100%;
-    height: 1px;
+    height: 3px;
     left: 0;
     display: block;
-    background: #333;
+    border:1px solid #333;
+    background:$snowcolor;
     position: absolute;
     transition: transform 0.6s ease-in-out, top 0.5s ease;
   }
@@ -596,6 +597,55 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
       #smp_footerframe {
         display:none;
     }
+
+  .menu_title {
+    padding:50px 0px;
+    border-radius: 30px;
+    width:200px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .menu_title:hover {
+    border-top: none;
+    background:#000;
+    color:#fff;
+    border:none;
+    border-radius: 30px;
+    -webkit-animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -moz-animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  @-webkit-keyframes simple_square_btn8{
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-5px);
+              transform: translateY(-5px);
+    }
+  }
+  @-moz-keyframes simple_square_btn8{
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-5px);
+              transform: translateY(-5px);
+    }
+  }
+  @keyframes simple_square_btn8 {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-5px);
+              transform: translateY(-5px);
+      }
       
 
       @media screen and (max-width:768px) {
@@ -611,7 +661,7 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
         }
         #page-top {
         position: fixed;
-        bottom: 50px;
+        bottom: 80px;
         right: 50px;
         font-size: 75%;
         width:50px;
@@ -622,7 +672,7 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
         border-radius: 50%;
         }
         nav {
-        padding-top: 30%;
+        padding-top: 100%;
         }
         #gloval-nav ul li {
             margin-top:0%;

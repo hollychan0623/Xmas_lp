@@ -27,6 +27,7 @@ $(function(){
     });
 });
 
+
 $(function() {
     var topBtn = $('#page-top');    
     topBtn.hide();
