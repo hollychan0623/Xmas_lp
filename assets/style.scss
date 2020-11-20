@@ -1,9 +1,9 @@
-    $basiccolor:#020046;
-    $mainfont:#020450;
-    $snowcolor:#fff;
-    $main_width:1020px;
-    $border-radious:150px;
-    $font-seren:Serendipity,sans-serif;
+$basiccolor:#020046;
+$mainfont:#020450;
+$snowcolor:#fff;
+$main_width:1020px;
+$border-radious:150px;
+$font-seren:Serendipity,sans-serif;
 
     
 body {
@@ -415,10 +415,10 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
         width:400px;
         font-size: 1em;
         padding:3% 0% 2% 0%;
-        color:$mainfont;
-        background-color: $snowcolor;
+        // color:$mainfont;
+        // background-color: $snowcolor;
         border-radius: 150px;
-        margin:5%;
+        margin:3%;
     }
 
     .wrapping {
@@ -599,23 +599,42 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
     }
 
   .menu_title {
-    padding:50px 0px;
-    border-radius: 30px;
-    width:200px;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 
-  .menu_title:hover {
+  .details {
+    width: 400px;
+    font-size: 1em;
+    padding: 5% 0% 4% 0%;
+    color: $basiccolor;
+    background-color: $snowcolor;
+    border-radius: 150px;
+
+  }
+
+  .details:hover {
     border-top: none;
     background:#000;
     color:#fff;
+    opacity:1;
     border:none;
-    border-radius: 30px;
     -webkit-animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  -moz-animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-          animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -moz-animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  a .details:hover{
+    opacity:1;
+  }
+
+   a{
+    display:block;
+    color:$snowcolor;
+    text-decoration:none;
+    -webkit-transition:all .5s cubic-bezier(.315,.04,0,.99);
+    transition:all .5s cubic-bezier(.315,.04,0,.99)
   }
   @-webkit-keyframes simple_square_btn8{
     0% {
@@ -646,7 +665,7 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
       -webkit-transform: translateY(-5px);
               transform: translateY(-5px);
       }
-      
+    }
 
       @media screen and (max-width:768px) {
         .mast__text {
@@ -695,7 +714,10 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
         .rubi {
             font-size:1em;
         }
-        .menu_title, .s_rubi {
+        .menu_title {
+          width:300px;
+        }
+        .details {
             width:300px;
             font-size:1.8em;
         }
