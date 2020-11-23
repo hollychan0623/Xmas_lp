@@ -1,44 +1,3 @@
-$(function(){
-	//scroll event
-	var topBtn = $('.christmas-btn__top');
-	var movieFix = $('.christmas-top__movie');
-    $(window).scroll(function () {
-
-    	//top
-        if ($(this).scrollTop() > 200) {
-            topBtn.addClass('active');
-            movieFix.css('position', 'relative');
-        } else {
-            topBtn.removeClass('active');
-        }
-
-        //movie
-        if ($(this).scrollTop() > 500) {
-            movieFix.css('position', 'relative');
-        } else {
-            movieFix.css('position', 'fixed');
-        }
-    });
-    topBtn.click(function () {
-        $('body,html').animate({
-            scrollTop: 0
-        }, 500);
-        return false;
-    });
-});
-
-// スムーススクロール
-$(function(){
-  $('a[href^="#"]').click(function(){
-    var speed = 500;
-    var href= $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top;
-    $("html, body").animate({scrollTop:position}, speed, "swing");
-    return false;
-  });
-});
-
 
 $(function() {
     var topBtn = $('#page-top');    
@@ -59,6 +18,48 @@ $(function() {
         return false;
     });
   }); 
+  
+$(function(){
+	//scroll event
+	var topBtn = $('.christmas');
+	var movieFix = $('.christmas-top__movie');
+    $(window).scroll(function () {
+
+    	//top
+        if ($(this).scrollTop() > 0) {
+            topBtn.addClass('active');
+            movieFix.css('position', 'fixed');
+        } else {
+            topBtn.removeClass('active');
+        }
+
+        //movie
+        if ($(this).scrollTop() > 1000) {
+            movieFix.css('display', 'none');
+        } else {
+            movieFix.css('position', 'absolute');
+        }
+    });
+    // topBtn.click(function () {
+    //     $('body,html').animate({
+    //         scrollTop: 0
+    //     }, 500);
+    //     return false;
+    // });
+});
+
+// スムーススクロール
+$(function(){
+  $('a[href^="#"]').click(function(){
+    var speed = 500;
+    var href= $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $("html, body").animate({scrollTop:position}, speed, "swing");
+    return false;
+  });
+});
+
 
   // ハンバーガーメニューOPEN
 (function($) {
