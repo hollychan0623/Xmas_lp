@@ -4,6 +4,11 @@ $snowcolor:#fff;
 $main_width:1020px;
 $border-radious:150px;
 $font-seren:Serendipity,sans-serif;
+@mixin hover_btn {
+  -webkit-animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -moz-animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
     
 body {
@@ -565,12 +570,16 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
           width:300px;
           margin: 0 auto;
           box-shadow:2px 2px 10px rgb(77, 77, 77);
+          -webkit-backface-visibility: hidden;
+          -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
       }
 
       .moreletter {
           font-family: "URWClassicoRegular", sans-serif;
           font-size: 1.5em;
           color:$snowcolor;
+          @include hover_btn();
       }
 
       #lastmore {
@@ -625,9 +634,7 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
     color:#fff;
     opacity:1;
     border:none;
-    -webkit-animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    -moz-animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    @include hover_btn();
   }
 
   a .details:hover{
