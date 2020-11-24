@@ -122,7 +122,7 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
   //Letter animation
   &__text{
     font-family: $font-seren;
-    font-size: 1.5em;
+    font-size: 2.5em;
     margin: 0 0 0.5em;
     line-height: 1.5;
     white-space: pre;
@@ -346,7 +346,7 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
     }
     .christmas .christmas-top__head {
         font-size: 100px;
-        font-size: 5rem;
+        font-size: 3.5rem;
         text-align: center;
         color: #fff;
         z-index: 20;
@@ -657,13 +657,13 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
     opacity:1;
   }
 
-   a{
-    display:block;
-    color:$snowcolor;
-    text-decoration:none;
-    -webkit-transition:all .5s cubic-bezier(.315,.04,0,.99);
-    transition:all .5s cubic-bezier(.315,.04,0,.99)
-  }
+  a {
+  display:block;
+  color:$snowcolor;
+  text-decoration:none;
+  -webkit-transition:all .5s cubic-bezier(.315,.04,0,.99);
+  transition:all .5s cubic-bezier(.315,.04,0,.99)
+}
   @-webkit-keyframes simple_square_btn8{
     0% {
       -webkit-transform: translateY(0);
