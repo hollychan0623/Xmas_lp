@@ -1502,7 +1502,7 @@ ruby > rt {
   padding-bottom: 10%;
 }
 
-.menu_title, .s_rubi {
+.menu_title, .menu_title_2, .s_rubi {
   width: 400px;
   font-size: 1em;
   padding: 3% 0% 2% 0%;
@@ -1703,12 +1703,12 @@ small {
   display: none;
 }
 
-.menu_title {
+.menu_title, .menu_title_2, .menu_title_2 {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-.details {
+.details, .details_2, .details_2:hover {
   width: 400px;
   font-size: 1em;
   padding: 5% 0% 4% 0%;
@@ -1717,7 +1717,14 @@ small {
   border-radius: 150px;
 }
 
-.details:hover {
+.details_2 {
+  color: #fff;
+  background: #034f1b;
+  -webkit-box-shadow: 2px 2px 10px #4d4d4d;
+          box-shadow: 2px 2px 10px #4d4d4d;
+}
+
+.details:hover, .details_2:hover {
   border-top: none;
   background: #000;
   color: #fff;
@@ -1727,7 +1734,13 @@ small {
   animation: simple_square_btn8 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-a .details:hover {
+.details_2:hover {
+  background: #034f1b;
+  -webkit-animation: simple_square_btn8 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: simple_square_btn8 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+a .details:hover, a .details_2:hover {
   opacity: 1;
 }
 
@@ -1808,10 +1821,10 @@ a {
   .rubi, .title, .submenu, .phrase, small {
     font-size: 1em;
   }
-  .menu_title {
+  .menu_title, .menu_title_2 {
     width: 300px;
   }
-  .details {
+  .details, .details_2, .details_2:hover {
     width: 300px;
     font-size: 1.8em;
   }
@@ -1856,7 +1869,7 @@ a {
   }
   .chiristmas_items_li {
     width: 40%;
-    padding: 0px;
+    padding: 0 3%;
   }
   .item_name {
     font-size: 1em;
