@@ -212,7 +212,7 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
   }
   
   #gloval-nav {
-    background: #000;
+    background: rgb(141, 0, 0);
     color: #fff;
     position: fixed;
     top: 0;
@@ -389,7 +389,7 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
     }
 
     .snowline {
-        margin:10% auto;
+        // margin:5% auto;
         background: url(./img/snowflake.png);
         background-repeat: repeat-x;
         height:150px;

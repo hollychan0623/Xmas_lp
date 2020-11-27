@@ -1232,7 +1232,7 @@ nav {
 }
 
 #gloval-nav {
-  background: #000;
+  background: #8d0000;
   color: #fff;
   position: fixed;
   top: 0;
@@ -1466,7 +1466,6 @@ h1 {
 }
 
 .snowline {
-  margin: 10% auto;
   background: url(./img/snowflake.png);
   background-repeat: repeat-x;
   height: 150px;
