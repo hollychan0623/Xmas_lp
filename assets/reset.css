@@ -79,7 +79,7 @@ li {
 
 a:active,
 a:hover {
-  outline-width: 0; /* Remove the outline when hovering in all browsers */
+  outline-width: 0;
   opacity: 0.5 ;
 }
 

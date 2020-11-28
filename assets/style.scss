@@ -1,12 +1,146 @@
-    $basiccolor:#020046;
-    $mainfont:#020450;
-    $snowcolor:#fff;
-    $main_width:1020px;
-    $border-radious:150px;
+$basiccolor:#020046;
+$mainfont:#020450;
+$snowcolor:#fff;
+$main_width:1020px;
+$border-radious:150px;
+$font-seren:Serendipity,sans-serif;
+@mixin hover_btn {
+  -webkit-animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -moz-animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
     
 body {
     font-family: 'Times New Roman', Times, serif;
+}
+
+// メリークリスマスアニメーション
+// Config: fonts
+// Config: Ease
+$ease-cb: cubic-bezier(.19,1,.22,1);
+
+//--------------------------
+//  nth-trans-delay()
+//  @description: Transition Delay on nth-childs
+//  @param: $delay_items: [7]    - number of nth-of-type items to create
+//  @param: $delay_time:[1.5s]   - transition-dealy value
+//--------------------------
+@mixin nth-trans-delay($delay_items: 7, $delay_time: 0.2s){
+@for $i from 1 through $delay_items {
+  &:nth-child(#{$i}) {   
+   transition-delay: $delay_time * $i; 
+  }
+ }
+}
+
+//--------------------------
+//  nth-ani-delay()
+//  @description: Animation Delay on nth-childs
+//  @param: $delay_items: [7] - number of nth-of-type items to create
+//  @param: $delay_time:[1.5s] - transition-dealy value
+//--------------------------
+@mixin nth-ani-delay($delay_items: 7, $delay_time: 0.2s){
+@for $i from 1 through $delay_items {
+  &:nth-child(#{$i}) {   
+   animation-delay: $delay_time * $i; 
+  }
+ }
+}
+//--------------------------
+//  bg-overlay()
+//  @description:pseduo overlay element  
+//  @param: $bg_hex: [$color-dark] - hex value for rgba conversion
+//  @param: $bg_opacity:[1] - alpha transparency level
+//  @param: $top_layer: element or class name for higher z-index layer
+//--------------------------
+@mixin bg-overlay($bg_hex: #111, $bg_opacity: 0.6, $top_layer: 'header') {
+  &:after {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba($bg_hex, $bg_opacity);
+  }
+  
+  // Layer atop overlay
+  & > #{$top_layer}{
+    z-index: 2;
+    position: relative;
+  }
+}
+//Setups
+*, *:before, *:after {
+  box-sizing: border-box; 
+}
+.sep{
+  border: 0;
+  width: 3em;
+  height: 1px;
+  margin: 1em 0;
+  background-color: rgba(255,255,255,0.4);
+}
+.mast{
+  position: relative;
+  display:flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background-color: #111;
+  @include bg-overlay(#111, 0.9);  
+  
+  &__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: 50%;
+  }
+  
+  &__header{
+    padding: 5%;
+  }
+  &__title{
+    font-family: $font-seren;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 1em;
+  }
+  // Letter animation
+  &__title span{
+    animation: letter-glow 0.7s 0s ease both;
+    @include nth-ani-delay(25, 0.05s);
+  }
+  //Letter animation
+  &__text{
+    font-family: $font-seren;
+    font-size: 2.5em;
+    margin: 0 0 0.5em;
+    line-height: 1.5;
+    white-space: pre;
+  }
+  
+  &__text span{
+    animation: letter-glow 0.7s 0s ease both;
+    @include nth-ani-delay(180, 0.05s);
+  }
+}
+
+
+// Letter Glow
+@keyframes letter-glow{
+  0%   { opacity: 0; text-shadow: 0px 0px 1px rgba(255,255,255,0.1)}
+  66%  { opacity: 1; text-shadow: 0px 0px 20px rgba(255,255,255,0.9) }
+  77%   { opacity: .7 ;  }
+  100% { opacity: 1; text-shadow: 0px 0px 20px rgba(255,255,255,0.0)}
 }
 
     /* ハンバーガーメニュー */
@@ -23,10 +157,11 @@ body {
   }
   #nav-toggle span {
     width: 100%;
-    height: 1px;
+    height: 3px;
     left: 0;
     display: block;
-    background: #333;
+    border:1px solid #333;
+    background:$snowcolor;
     position: absolute;
     transition: transform 0.6s ease-in-out, top 0.5s ease;
   }
@@ -77,7 +212,7 @@ body {
   }
   
   #gloval-nav {
-    background: #000;
+    background: rgb(141, 0, 0);
     color: #fff;
     position: fixed;
     top: 0;
@@ -177,7 +312,7 @@ body {
   
 
     .christmas .christmas-top {
-        position: relative;
+        position: absolute;
         height: 100vh;
     }
 
@@ -202,7 +337,7 @@ body {
     z-index: 10;
     width: 100vw;
     height: 100%;
-    animation: 5s fadeIn;
+    animation: 8s fadeIn;
     }
 
     .christmas .christmas-top {
@@ -211,7 +346,7 @@ body {
     }
     .christmas .christmas-top__head {
         font-size: 100px;
-        font-size: 5rem;
+        font-size: 3.5rem;
         text-align: center;
         color: #fff;
         z-index: 20;
@@ -254,7 +389,7 @@ body {
     }
 
     .snowline {
-        margin:10% auto;
+        // margin:5% auto;
         background: url(./img/snowflake.png);
         background-repeat: repeat-x;
         height:150px;
@@ -266,6 +401,11 @@ body {
         font-size: 2em;
     }
 
+    ruby > rt {
+      display: block;
+      font-size: 30%;
+      text-align:center;
+  }
     .title {
         @extend .rubi;
         font-size: 5em;
@@ -285,10 +425,14 @@ body {
         width:400px;
         font-size: 1em;
         padding:3% 0% 2% 0%;
-        color:$mainfont;
-        background-color: $snowcolor;
+        // color:$mainfont;
+        // background-color: $snowcolor;
         border-radius: 150px;
-        margin:5%;
+        margin:3%;
+    }
+
+    .menu_title_2 {
+      @extend .menu_title;
     }
 
     .wrapping {
@@ -430,12 +574,16 @@ body {
           width:300px;
           margin: 0 auto;
           box-shadow:2px 2px 10px rgb(77, 77, 77);
+          -webkit-backface-visibility: hidden;
+          -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
       }
 
       .moreletter {
           font-family: "URWClassicoRegular", sans-serif;
           font-size: 1.5em;
           color:$snowcolor;
+          @include hover_btn();
       }
 
       #lastmore {
@@ -445,12 +593,11 @@ body {
       #page-top {
         position: fixed;
         bottom: 50px;
-        right: 100px;
+        right: 30px;
         font-size: 77%;
-        width:90px;
+        width:150px;
       }
       #page-top a {
-        background: linear-gradient(180deg, #d6e3ff 0%, #cdfffd 70%, #fff 50%, #fff 100%);
         text-decoration: none;
         color: #000;
         width: 100px;
@@ -461,14 +608,97 @@ body {
       }
       #page-top a:hover {
         text-decoration: none;
-        background: linear-gradient(180deg, #d6e3ff 0%, #cdfffd 70%, #fff 50%, #fff 100%);
       }
+      .xmastree {
+        width:100px;
+        }
       #smp_footerframe {
         display:none;
     }
-      
+
+  .menu_title,.menu_title_2 {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .details {
+    width: 400px;
+    font-size: 1em;
+    padding: 5% 0% 4% 0%;
+    color: $basiccolor;
+    background-color: $snowcolor;
+    border-radius: 150px;
+  }
+
+  .details_2 {
+    @extend.details;
+    color: $snowcolor;
+    background:#034f1b;
+    box-shadow:2px 2px 10px rgb(77, 77, 77);
+  }
+
+  .details:hover {
+    border-top: none;
+    background:#000;
+    color:#fff;
+    opacity:1;
+    border:none;
+    @include hover_btn();
+  }
+
+  .details_2:hover {
+    background:#034f1b;
+    @extend.details;
+    @include hover_btn();
+  }
+
+  a .details:hover{
+    opacity:1;
+  }
+
+  a {
+  display:block;
+  color:$snowcolor;
+  text-decoration:none;
+  -webkit-transition:all .5s cubic-bezier(.315,.04,0,.99);
+  transition:all .5s cubic-bezier(.315,.04,0,.99)
+}
+  @-webkit-keyframes simple_square_btn8{
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-5px);
+              transform: translateY(-5px);
+    }
+  }
+  @-moz-keyframes simple_square_btn8{
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-5px);
+              transform: translateY(-5px);
+    }
+  }
+  @keyframes simple_square_btn8 {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-5px);
+              transform: translateY(-5px);
+      }
+    }
 
       @media screen and (max-width:768px) {
+        .mast__text {
+          font-size: 1em;
+        }
         .xmastree {
         width:60px;
         }
@@ -478,9 +708,10 @@ body {
         }
         #page-top {
         position: fixed;
-        bottom: 150px;
-        right: 10px;
+        bottom: 80px;
+        right: 50px;
         font-size: 75%;
+        width:50px;
         }
         #page-top a {
         width: 70px;
@@ -488,7 +719,7 @@ body {
         border-radius: 50%;
         }
         nav {
-        padding-top: 30%;
+        padding-top: 100%;
         }
         #gloval-nav ul li {
             margin-top:0%;
@@ -511,7 +742,10 @@ body {
         .rubi {
             font-size:1em;
         }
-        .menu_title, .s_rubi {
+        .menu_title {
+          width:300px;
+        }
+        .details {
             width:300px;
             font-size:1.8em;
         }
@@ -552,10 +786,10 @@ body {
        }
        .chiristmas_items_li {
         width: 40%;
-        padding:0px;
+        padding: 0 3%;
        }
        .item_name {
-           font-size:.6em;
+           font-size:1em;
        }
        #pc_footerframe {
            display:none;
