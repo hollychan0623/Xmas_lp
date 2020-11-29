@@ -3,6 +3,188 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
+section .inner div {
+  opacity: 0;
+  -webkit-transform-origin: 0px 0px;
+  transform-origin: 0px 0px;
+  -webkit-animation-name: Drop;
+  animation-name: Drop;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#snow .inner div {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: url("./img/twosnowflakes.png") no-repeat;
+}
+
+#snow .inner div.flake2,
+#snow .inner div.flake4,
+#snow .inner div.flake6,
+#snow .inner div.flake8,
+#snow .inner div.flake10 {
+  background-size: 5px 6px !important;
+}
+
+.flake1 {
+  left: 20px;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+}
+
+.flake2 {
+  left: 40px;
+  -webkit-animation-duration: 2.7s;
+  animation-duration: 2.7s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.flake3 {
+  left: 60px;
+  -webkit-animation-duration: 2.9s;
+  animation-duration: 2.9s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.flake4 {
+  left: 80px;
+  -webkit-animation-duration: 2.4s;
+  animation-duration: 2.4s;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.flake5 {
+  left: 100px;
+  -webkit-animation-duration: 2.4s;
+  animation-duration: 2.4s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.flake6 {
+  right: 0px;
+  -webkit-animation-duration: 2.2s;
+  animation-duration: 2.2s;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.flake7 {
+  right: 20px;
+  -webkit-animation-duration: 2.7s;
+  animation-duration: 2.7s;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.flake8 {
+  right: 40px;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+.flake9 {
+  right: 60px;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+.flake9 {
+  right: 80px;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+.flake10 {
+  right: 100px;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+@-webkit-keyframes Drop {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  20% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: 0.3;
+  }
+  40% {
+    -webkit-transform: translateY(150px);
+    transform: translateY(150px);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(250px);
+    transform: translateY(250px);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: translateY(450px);
+    transform: translateY(450px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes Drop {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  20% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: 0.3;
+  }
+  40% {
+    -webkit-transform: translateY(150px);
+    transform: translateY(150px);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(250px);
+    transform: translateY(250px);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: translateY(300px);
+    transform: translateY(300px);
+    opacity: 0.3;
+  }
+}
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -38,7 +220,8 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(17, 17, 17, 0.9);
+  background-color: rgba(17, 17, 17, 0.9);
+  background-image: url("./img/twosnowflakes");
 }
 
 .mast > header {
@@ -201,7 +384,7 @@ body {
 
 .mast__text {
   font-family: Serendipity, sans-serif;
-  font-size: 2.5em;
+  font-size: 3em;
   margin: 0 0 0.5em;
   line-height: 1.5;
   white-space: pre;
@@ -1694,6 +1877,14 @@ small {
   text-decoration: none;
 }
 
+#wrapping-top {
+  position: fixed;
+  bottom: 200px;
+  right: 30px;
+  font-size: 77%;
+  width: 150px;
+}
+
 .xmastree {
   width: 100px;
 }
@@ -1775,21 +1966,23 @@ a {
 
 @media screen and (max-width: 768px) {
   .mast__text {
-    font-size: 1em;
-  }
-  .xmastree {
-    width: 60px;
+    font-size: 1.5em;
   }
   #gloval-nav {
     width: 60%;
     font-size: 1em;
   }
-  #page-top {
+  #page-top, #wrapping-top {
     position: fixed;
     bottom: 80px;
     right: 50px;
     font-size: 75%;
     width: 50px;
+  }
+  #wrapping-top {
+    bottom: 130px;
+    right: 25px;
+    width: 80px;
   }
   #page-top a {
     width: 70px;
@@ -1812,7 +2005,7 @@ a {
     left: 0%;
   }
   .christmas .christmas-top__head {
-    font-size: 3.5em;
+    font-size: 2.5em;
   }
   .christmas_description {
     font-size: .8em;
@@ -1875,6 +2068,9 @@ a {
   }
   #pc_footerframe {
     display: none;
+  }
+  #smp_footerframe {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */
