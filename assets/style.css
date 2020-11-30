@@ -1,6 +1,8 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 body {
   font-family: 'Times New Roman', Times, serif;
+  overflow-x: hidden;
 }
 
 section .inner div {
@@ -231,7 +233,7 @@ section .inner div {
 }
 
 .mast__title {
-  font-family: Serendipity, sans-serif;
+  font-family: "Dancing Script", cursive;
   font-size: 1.5em;
   font-weight: 400;
   letter-spacing: 1em;
@@ -368,7 +370,7 @@ section .inner div {
 }
 
 .mast__text {
-  font-family: Serendipity, sans-serif;
+  font-family: "Dancing Script", cursive;
   font-size: 3em;
   margin: 0 0 0.5em;
   line-height: 1.5;
@@ -1557,6 +1559,7 @@ nav {
   width: 100vw;
   height: auto;
   top: 0;
+  position: relative;
 }
 
 .christmas-top__movie:before {

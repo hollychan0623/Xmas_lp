@@ -32,34 +32,34 @@ $(function() {
     });
   }); 
   
-$(function(){
-	//scroll event
-	var topBtn = $('.christmas');
-	var movieFix = $('.christmas-top__movie');
-    $(window).scroll(function () {
+// $(function(){
+// 	//scroll event
+// 	var topBtn = $('.christmas');
+// 	var movieFix = $('.christmas-top__movie');
+//     $(window).scroll(function () {
 
-    	//top
-        if ($(this).scrollTop() > 0) {
-            topBtn.addClass('active');
-            movieFix.css('position', 'fixed');
-        } else {
-            topBtn.removeClass('active');
-        }
+//     	//top
+//         if ($(this).scrollTop() > 0) {
+//             topBtn.addClass('active');
+//             movieFix.css('position', 'fixed');
+//         } else {
+//             topBtn.removeClass('active');
+//         }
 
-        //movie
-        if ($(this).scrollTop() > 1000) {
-            movieFix.css('display', 'none');
-        } else {
-            movieFix.css('position', 'absolute');
-        }
-    });
+//         //movie
+//         if ($(this).scrollTop() > 1000) {
+//             movieFix.css('display', 'none');
+//         } else {
+//             movieFix.css('position', 'absolute');
+//         }
+//     });
     // topBtn.click(function () {
     //     $('body,html').animate({
     //         scrollTop: 0
     //     }, 500);
     //     return false;
     // });
-});
+// });
 
 // スムーススクロール
 $(function(){

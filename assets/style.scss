@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 $basiccolor:#020046;
 $mainfont:#020450;
 $snowcolor:#fff;
 $main_width:1020px;
 $border-radious:150px;
-$font-seren:Serendipity,sans-serif;
+$font-hikki:'Dancing Script', cursive;
+
+
+
 @mixin hover_btn {
   -webkit-animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     -moz-animation: simple_square_btn8 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -13,6 +18,7 @@ $font-seren:Serendipity,sans-serif;
     
 body {
     font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
 }
 
 section .inner div {
@@ -306,7 +312,7 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
     padding: 5%;
   }
   &__title{
-    font-family: $font-seren;
+    font-family: $font-hikki;
     font-size: 1.5em;
     font-weight: 400;
     letter-spacing: 1em;
@@ -318,7 +324,7 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
   }
   //Letter animation
   &__text{
-    font-family: $font-seren;
+    font-family: $font-hikki;
     font-size: 3em;
     margin: 0 0 0.5em;
     line-height: 1.5;
@@ -524,6 +530,7 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
         width: 100vw;
         height: auto;
         top:0;
+        position:relative;
     }
 
     .christmas-top__movie:before{
