@@ -20,8 +20,8 @@ section .inner div {
 #snow .inner div {
   position: absolute;
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background: url("./img/twosnowflakes.png") no-repeat;
 }
 
@@ -1700,6 +1700,7 @@ ruby > rt {
 .pic {
   border-radius: 150px;
   margin: 10%;
+  z-index: 100;
 }
 
 .phrase {
@@ -1828,6 +1829,54 @@ small {
 
 .chiristmas_items_img {
   width: 100%;
+}
+
+.flake6 {
+  right: 0px;
+  -webkit-animation-duration: 2.2s;
+  animation-duration: 2.2s;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.flake7 {
+  right: 10px;
+  -webkit-animation-duration: 2.7s;
+  animation-duration: 2.7s;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.flake8 {
+  right: 20px;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+.flake9 {
+  right: 30px;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+.flake9 {
+  right: 40px;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+.flake10 {
+  right: 50px;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }
 
 .morebutton {
